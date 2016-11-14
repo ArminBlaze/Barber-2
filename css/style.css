@@ -28,6 +28,14 @@ body {
   }
 }
 
+.pageHeader__logo {
+  background: rgba(128, 128, 128, 0.5);
+}
+
+.mainNav {
+  background: rgba(75, 40, 24, 0.7);
+}
+
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -474,6 +482,141 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+.pageHeader {
+  position: relative;
+  min-height: 135px;
+}
+
+.pageHeader__logo {
+  height: 85px;
+}
+
+@media (min-width: 768px) {
+  .pageHeader {
+    min-height: 72px;
+    padding-bottom: 398px;
+  }
+  .pageHeader__logo {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 398px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pageHeader {
+    padding-bottom: 648px;
+  }
+  .pageHeader__logo {
+    height: 648px;
+  }
+}
+
+.mainNav {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.mainNav::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.mainNav__toggle {
+  width: 70px;
+  height: 50px;
+  font-size: 0;
+  border: 0;
+  background: #6a4d38;
+  float: left;
+}
+
+.mainNav__wrapper {
+  width: 250px;
+  float: left;
+  min-height: 568px;
+  position: absolute;
+  left: 70px;
+}
+
+.mainNav__list,
+.mainNav__userList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mainNav__list {
+  min-height: 255px;
+}
+
+.mainNav__userList {
+  min-height: 50px;
+}
+
+@media (min-width: 768px) {
+  .mainNav {
+    width: auto;
+    min-height: 72px;
+  }
+  .mainNav__toggle {
+    display: none;
+  }
+  .mainNav__wrapper {
+    position: relative;
+    left: auto;
+    float: none;
+    min-height: 0;
+    width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+  .mainNav__wrapper {
+    width: 640px;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1200px) {
+  .mainNav__wrapper {
+    width: 960px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mainNav__wrapper::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .mainNav__list {
+    min-height: 72px;
+    float: left;
+    width: 570px;
+  }
+  .mainNav__list li {
+    display: inline-block;
+  }
+  .mainNav__userList {
+    min-height: 72px;
+    float: right;
+    width: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mainNav__list {
+    width: 780px;
+  }
+  .mainNav__userList {
+    width: 120px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
