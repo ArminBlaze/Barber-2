@@ -714,6 +714,7 @@ template {
   min-height: 360px;
   box-sizing: border-box;
   padding-top: 30px;
+  outline: 1px solid lime;
 }
 
 @media (min-width: 768px) {
@@ -779,6 +780,9 @@ template {
   }
   .advantages__item:nth-child(n+2) {
     display: block;
+  }
+  .advantages__toggles {
+    display: none;
   }
 }
 
