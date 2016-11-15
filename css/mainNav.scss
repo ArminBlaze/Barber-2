@@ -25,6 +25,8 @@
 	min-height: 568px;
 	position: absolute;
 	left: 70px;
+	z-index: 2;
+//	background-color: #6a4d38;
 }
 
 .mainNav__list,
@@ -57,6 +59,7 @@
 		left: auto;
 		float: none;
 		min-height: 0;
+		background-color: transparent;
 		@include container;
 		@include clearfix;
 	}
