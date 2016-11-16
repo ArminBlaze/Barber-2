@@ -1,7 +1,7 @@
 body {
   font-size: 18px;
   line-height: 27px;
-  font-family: Arial, sans-serif;
+  font-family: 'PT Sans Narrow', Arial, sans-serif;
   color: #f7f4f1;
   font-style: normal;
   background-color: #292929;
@@ -645,8 +645,16 @@ template {
   padding-bottom: 5px;
 }
 
+.stats__legend {
+  display: block;
+}
+
 .stats__legend_top {
   display: none;
+}
+
+.stats__legend_bottom {
+  min-height: 45px;
 }
 
 .stats__table {

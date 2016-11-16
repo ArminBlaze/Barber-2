@@ -9,8 +9,16 @@
 	padding-bottom: 5px;
 }
 
+.stats__legend {
+	display: block;
+}
+
 .stats__legend_top {
 	display: none;
+}
+
+.stats__legend_bottom {
+	min-height: 45px;
 }
 
 .stats__table {
@@ -66,3 +74,5 @@
 		width: 640px;
 	}
 }
+
+
