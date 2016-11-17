@@ -1,5 +1,7 @@
 .reviews {
 	padding-top: 30px;
+	padding-bottom: 1px;
+	outline: 1px solid yellow;
 }
 
 .reviews__wrapper {
@@ -7,6 +9,8 @@
 	outline: 1px solid white;
 	min-height: 255px;
 	position: relative;
+	padding-bottom: 1px;
+	box-sizing: border-box;
 }
 
 .reviews__title {
