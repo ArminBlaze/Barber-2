@@ -1,0 +1,164 @@
+.pageFooter {
+	min-height: 500px;
+	padding-top: 38px;
+	text-align: center;
+}
+
+.pageFooter__wrapper {
+	@include container;
+	outline: 1px solid white;
+}
+
+.pageFooter__contacts {
+	box-sizing: border-box;
+	min-height: 215px;
+	
+	padding: 0 20px;
+	padding-top: 30px;
+	margin: 0;
+}
+
+.pageFooter__contacts a {
+	display: block;
+}
+
+.pageFooter__contacts b {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.pageFooter__contacts a {
+	display: block;
+	margin-top: 17px;	
+	padding: 12px 0;
+	color: white;
+	text-decoration: none;
+}
+
+.pageFooter__contacts_hidden {
+	display: none;
+}
+
+.pageFooter__social {
+	margin: 0;
+	padding: 0;
+	min-height: 101px;
+	outline: 1px solid white;
+	font-size: 0;
+}
+
+.socialLinks {
+	@include clearfix;
+}
+
+.socialLink {
+	display: block;
+	float: left;
+	width: 33.3%;
+	height: 101px;
+	margin: 0;
+	font-size: 0;
+}
+
+.pageFooter__copyright {
+	min-height: 140px;
+	box-sizing: border-box;
+	padding: 0 20px;
+	padding-top: 28px;
+	margin: 0;
+}
+
+.pageFooter__copyrightLink {
+	display: block;
+	margin-top: 10px;
+	padding: 13px 0;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+@media #{$tabletWidth} {
+	
+	.pageFooter {
+		min-height: 350px;
+	}
+	
+	.pageFooter__contacts {
+		min-height: 150px;
+		text-align: left;
+		padding: 0;
+		padding-top: 10px;
+		margin-right: 180px;
+	}
+	
+	.pageFooter__contacts b {
+		text-transform: uppercase;
+	}
+	
+	.pageFooter__contacts a {
+		display: block;
+		margin-top: -11px;
+	}
+	
+	.pageFooter__contacts_hidden {
+		display: inline;
+	}
+	
+	.pageFooter__wrapper {
+		position: relative;
+	}
+	
+	.pageFooter__copyright {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 160px;
+		padding-top: 10px;
+	}
+}
+
+@media #{$desktopWidth} {
+	
+	.pageFooter {
+		min-height: 200px;
+	}
+	
+	.pageFooter__wrapper {
+		@include clearfix;
+	}
+	
+	.pageFooter__contacts,
+	.pageFooter__social,
+	.pageFooter__copyright {
+		float: left;
+		margin: 0;
+	}
+	
+	.pageFooter__contacts {
+		width: 350px;
+	}
+	
+	.pageFooter__social {
+		width: 260px;
+		padding-top: 10px;
+		font-size: 18px;
+	}
+	
+	.socialLinks {
+		text-align: center;
+		display: inline-block;
+		padding-top: 14px;
+	}
+	
+	.socialLink {
+		width: 50px;
+		height: 50px;
+		outline: 1px solid lime;
+		margin-right: 6px;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
