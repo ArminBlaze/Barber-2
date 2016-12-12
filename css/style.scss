@@ -2,11 +2,32 @@
 
 $tabletWidth: '(min-width: 768px)';
 $desktopWidth: '(min-width: 1200px)';
+$mobileWidthOnly: '(max-width: 767px)';
 
 $bg_darkgray: #292929;
 $bg_lightgray: #f8f5f2;
 
 // Settings
+
+@font-face {
+	font-weight: normal;
+	font-family: "PT Sans Narrow";
+	font-style: normal;
+	
+	src: url("../fonts/PTSansNarrow.ttf") format("truetype"),
+	url("../fonts/PTSansNarrow.woff") format("woff");
+}
+
+@font-face {
+	font-weight: 700;
+	font-family: "PT Sans Narrow";
+	font-style: normal;
+	
+	src: url("../fonts/PTSansNarrowBold.ttf") format("truetype"),
+	url("../fonts/PTSansNarrowBold.woff") format("woff");
+}
+
+
 
 body {
 	font-size: 18px;
@@ -24,7 +45,7 @@ img {
 }
 
 @import "mixins";
-@import "outlines";
+//@import "outlines";
 @import "normalize";
 
 
@@ -35,6 +56,8 @@ img {
 @import "news";
 @import "reviews";
 @import "pageFooter";
+
+
 
 
 
