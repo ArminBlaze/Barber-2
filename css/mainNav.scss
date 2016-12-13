@@ -1,12 +1,10 @@
-
-
-
-
-
 .mainNav {
 	position: relative;
 	width: 320px;
 	margin: 0 auto;
+	background-color: #826550;
+	min-height: 51px;
+	
 	@include clearfix;
 }
 
@@ -16,17 +14,70 @@
 	font-size: 0;
 	border: 0;
 	background: #6a4d38;
-	float: left;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	
+	&:hover {
+		background-color: #624530;
+	}
+	
+	&:active {
+		background-color: #624530;
+	}
+}
+
+.mainNav_closed .mainNav__toggle:before {
+	content: '';
+	position: absolute;
+	width: 36px;
+	height: 2px;
+	background-color: #fff;
+	left: 17px;
+	top: 15px;
+	
+	box-shadow: 0 8px white,
+							0 16px white;
+}
+
+.mainNav_closed .mainNav__toggle:active:before {
+	opacity: 0.3;
+}
+
+.mainNav_opened .mainNav__toggle {
+	top: 0;
+	right: auto;
+	left: 0;
+	
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		top: 24px;
+		left: 18px;
+		width: 36px;
+		height: 2px;
+		background-color: #fff;
+	}
+	
+	&:before {
+		transform: rotate(45deg);
+	}
+	
+	&:after {
+		transform: rotate(-45deg);
+	}
+	
+	&:active:before,
+	&:active:after {
+		opacity: 0.3;
+	}
 }
 
 .mainNav__wrapper {
-	width: 250px;
-	float: left;
-	min-height: 568px;
-	position: absolute;
-	left: 70px;
-	z-index: 2;
-//	background-color: #6a4d38;
+	background-color: #6a4d38;
 }
 
 .mainNav__list,
@@ -37,11 +88,127 @@
 }
 
 .mainNav__list {
-	min-height: 255px;
+	font-weight: 700;
 }
 
-.mainNav__userList {
-	min-height: 50px;
+.mainNav__item a {
+	display: block;
+	padding: 21px;
+	padding-top: 12px;
+	padding-bottom: 13px;
+	font-size: 18px;
+	line-height: 24px;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	background-color: #826550;
+	border-top: 1px solid #886e5b;
+	border-bottom: 1px solid #71543f;
+}
+
+.mainNav__item a[href] {
+	&:hover {
+		background-color: #755a46;
+		
+	}
+	
+	&:active {
+		border-color: transparent;
+		opacity: 0.3;
+	}
+	
+}
+
+.mainNav__userLogin {
+	position: relative;
+	display: block;
+	font-size: 18px;
+	line-height: 24px;
+	color: white;
+	text-decoration: none;
+	padding-left: 48px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	padding-right: 21px;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		left: 20px;
+		top: 17px;
+		
+		width: 16px;
+		height: 16px;
+		
+		background-image: url(../img/mainNav__userLogin.png);
+		opacity: 0.3;
+	}
+}
+
+@media #{$mobileWidthOnly} {
+	
+	.mainNav_closed .mainNav__item {
+		display: none;
+		
+		&_active {
+			display: block;
+		}
+	}
+	
+	.mainNav_closed .mainNav__userList {
+		display: none;
+	}
+	
+	.mainNav_closed .mainNav__item_active a {
+		text-align: center;
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+	
+	.mainNav_opened .mainNav__wrapper {
+		position: absolute;
+		left: 70px;
+		top: 0;
+		right: 0;
+		z-index: 10;
+		height: 80vh;
+	}
+	
+	.mainNav_opened .mainNav__wrapper:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 8px;
+		box-shadow: inset 4px 0 5px -2px  rgba(black, 0.5);
+	}
+	
+	
+	.mainNav_nojs .mainNav__toggle {
+		display: none;
+	}
+	
+	.mainNav_nojs .mainNav__wrapper {
+		display: block;
+		position: static;
+		height: auto;
+	}
+	
+	.mainNav_nojs .mainNav__item {
+		display: block;
+	}
+	
+	.mainNav_nojs .mainNav__item_active a {
+		text-align: left;
+		padding-left: 21px;
+		padding-right: 21px;
+	}
+	
+	.mainNav_nojs .mainNav__userList {
+		display: block;
+	}
+	
 }
 
 @media #{$tabletWidth} {
@@ -59,7 +226,6 @@
 		left: auto;
 		float: none;
 		min-height: 0;
-		background-color: transparent;
 		@include container;
 		@include clearfix;
 	}
