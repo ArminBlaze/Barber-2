@@ -1,6 +1,11 @@
 .pageHeader {
 	position: relative;
-//	min-height: 135px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
 }
 
 .pageHeader__logo {
@@ -16,13 +21,12 @@
 @media #{$tabletWidth} {
 	.pageHeader {
 		min-height: 72px;
-		padding-bottom: 397px;
 		background-color: black;
 	}
 	
 	.pageHeader__logo {
-		position: absolute;
-		bottom: 0;
+		order: 1;
+		position: relative;
 		width: 100%;
 		height: 397px;
 		
@@ -42,9 +46,6 @@
 }
 
 @media #{$desktopWidth} {
-	.pageHeader {
-		padding-bottom: 648px;
-	}
 	
 	.pageHeader__logo {
 		height: 648px;
