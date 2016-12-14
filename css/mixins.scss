@@ -19,6 +19,17 @@
 	}
 }
 
+@mixin containerFluid() {
+	width: auto;
+	
+	@media #{$tabletWidth} {
+		width: 83.3%;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	
+}
+
 @mixin no-outline() {
 	outline: none;
 	background: transparent;
