@@ -666,6 +666,7 @@ template {
   height: 16px;
   background-image: url(../img/mainNav__userLogin.png);
   opacity: 0.3;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 767px) {
@@ -725,15 +726,13 @@ template {
   .mainNav {
     width: auto;
     min-height: 72px;
+    background-color: #000;
   }
   .mainNav__toggle {
     display: none;
   }
   .mainNav__wrapper {
-    position: relative;
-    left: auto;
-    float: none;
-    min-height: 0;
+    background-color: transparent;
     width: 320px;
     margin: 0 auto;
   }
@@ -758,17 +757,65 @@ template {
     clear: both;
   }
   .mainNav__list {
-    min-height: 72px;
     float: left;
     width: 570px;
   }
-  .mainNav__list li {
-    display: inline-block;
+  .mainNav__item {
+    float: left;
+    margin-right: 33px;
+  }
+  .mainNav__item:last-child {
+    margin: 0;
+  }
+  .mainNav__item_active {
+    position: relative;
+  }
+  .mainNav__item_active:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 3px;
+    background-color: #826550;
+  }
+  .mainNav__item a {
+    padding-left: 0;
+    padding-right: 0;
+    background: none;
+    border: none;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  .mainNav__item a[href]:hover {
+    color: #826550;
+    background-color: transparent;
+  }
+  .mainNav__item a[href]:active {
+    color: white;
+    background-color: transparent;
+    opacity: 0.3;
   }
   .mainNav__userList {
-    min-height: 72px;
     float: right;
     width: 60px;
+  }
+  .mainNav__userLogin {
+    padding-top: 25px;
+    padding-bottom: 24px;
+    font-size: 0;
+  }
+  .mainNav__userLogin:before {
+    top: 29px;
+    left: 11px;
+  }
+  .mainNav__userLogin:hover:before {
+    opacity: 1;
+    background-position: 0 -24px;
+  }
+  .mainNav__userLogin:active:before {
+    opacity: 0.3;
+    background-position: 0 0;
   }
 }
 
@@ -776,8 +823,55 @@ template {
   .mainNav__list {
     width: 780px;
   }
+  .mainNav__item {
+    margin: 0;
+    margin-right: 1px;
+  }
+  .mainNav__item_active:after {
+    left: 31px;
+    right: 31px;
+  }
+  .mainNav__item a {
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+  .mainNav__item a[href]:hover {
+    color: #000;
+    background-color: #fff;
+  }
+  .mainNav__item a[href]:active {
+    opacity: 1;
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+  }
   .mainNav__userList {
-    width: 120px;
+    width: 129px;
+  }
+  .mainNav__userLogin {
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    padding-left: 61px;
+  }
+  .mainNav__userLogin:before {
+    top: 28px;
+    left: 25px;
+  }
+  .mainNav__userLogin:hover {
+    color: black;
+    background-color: #fff;
+  }
+  .mainNav__userLogin:hover:before {
+    opacity: 0.3;
+    background-position: 0 -48px;
+  }
+  .mainNav__userLogin:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+  }
+  .mainNav__userLogin:active:before {
+    opacity: 0.1;
   }
 }
 

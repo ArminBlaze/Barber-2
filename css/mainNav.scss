@@ -142,6 +142,7 @@
 		
 		background-image: url(../img/mainNav__userLogin.png);
 		opacity: 0.3;
+		background-repeat: no-repeat;
 	}
 }
 
@@ -215,6 +216,7 @@
 	.mainNav {
 		width: auto;
 		min-height: 72px;
+		background-color: #000;
 	}
 	
 	.mainNav__toggle {
@@ -222,37 +224,158 @@
 	}
 	
 	.mainNav__wrapper {
-		position: relative;
-		left: auto;
-		float: none;
-		min-height: 0;
+		background-color: transparent;
 		@include container;
 		@include clearfix;
 	}
 	
 	.mainNav__list {
-		min-height: 72px;
 		float: left;
 		width: 570px;
+	}
+	
+	.mainNav__item {
+		float: left;
+		margin-right: 33px;
 		
-		li {
-			display: inline-block;
+		&:last-child {
+			margin: 0;
+		}
+		
+		&_active {
+			position: relative;
+			
+			&:after {
+				position: absolute;
+				content: '';
+				left: 0;
+				right: 0;
+				bottom: -1px;
+				height: 3px;
+				background-color: #826550;
+			}
 		}
 	}
 	
+	.mainNav__item a {
+		padding-left: 0;
+		padding-right: 0;
+		background: none;
+		border: none;
+		padding-top: 24px;
+		padding-bottom: 25px;
+	}
+	
+	.mainNav__item a[href]:hover {
+		color: #826550;
+		background-color: transparent;
+	}
+	
+	.mainNav__item a[href]:active {
+		color: white;
+		background-color: transparent;
+		opacity: 0.3;
+	}
+	
 	.mainNav__userList {
-		min-height: 72px;
 		float: right;
 		width: 60px;
 	}
+	
+	.mainNav__userLogin {
+		padding-top: 25px;
+		padding-bottom: 24px;
+		font-size: 0;
+		
+		&:before {
+			top: 29px;
+			left: 11px;
+		}
+		
+		&:hover:before {
+			opacity: 1;
+			background-position: 0 -24px;
+		}
+		
+		&:active:before {
+			opacity: 0.3;
+			background-position: 0 0;
+		}
+	}
+	
+	
 }
 
 @media #{$desktopWidth} {
+	
 	.mainNav__list {
 		width: 780px;
 	}
 	
-	.mainNav__userList {
-		width: 120px;
+	.mainNav__item {
+		margin: 0;
+		margin-right: 1px;
+		
+		&_active:after {
+			left: 31px;
+			right: 31px;
+		}
 	}
+	
+	.mainNav__item a {
+		padding-left: 31px;
+		padding-right: 31px;
+	}
+	
+	.mainNav__item a[href] {
+		
+		&:hover {
+			color: #000;
+			background-color: #fff;
+		}
+		
+		&:active {
+			opacity: 1;
+			color: rgba(black, 0.3);
+			background-color: #fff;
+		}
+	}
+	
+	.mainNav__userList {
+		width: 129px;
+	}
+	
+	.mainNav__userLogin {
+		font-weight: 700;
+		font-size: 18px;
+		color: #fff;
+		text-transform: uppercase;
+		padding-left: 61px;
+		
+		&:before {
+			top: 28px;
+			left: 25px;
+		}
+		
+		&:hover {
+			color: black;
+			background-color: #fff;
+			
+			&:before {
+				opacity: 0.3;
+				background-position: 0 -48px;
+			}
+		}
+		
+		&:active {
+			color: rgba(black, 0.3);
+			background-color: #fff;
+			
+			&:before {
+				opacity: 0.1;
+			}
+		}
+	}
+	
+	
 }
