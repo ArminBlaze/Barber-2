@@ -248,11 +248,12 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		margin-right: 30px;
 	}
 	
 	.mainNav__item {
 //		float: left;
-		margin-right: 33px;
+//		margin-right: 30px;
 		
 		&:last-child {
 			margin: 0;
@@ -294,7 +295,7 @@
 	}
 	
 	.mainNav__userList {
-		margin-left: 30px;
+//		margin-left: 30px;
 	}
 	
 	.mainNav__userLogin {
@@ -304,7 +305,7 @@
 		
 		&:before {
 			top: 28px;
-			left: 11px;
+			left: 20px;
 		}
 		
 		&:hover:before {
