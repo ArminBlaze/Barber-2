@@ -1,11 +1,11 @@
 .mainNav {
 	position: relative;
-	width: 320px;
-	margin: 0 auto;
+	width: auto;
+//	margin: 0 auto;
 	background-color: #826550;
 	min-height: 51px;
 	
-	@include clearfix;
+//	@include clearfix;
 }
 
 .mainNav__toggle {
@@ -225,17 +225,33 @@
 	
 	.mainNav__wrapper {
 		background-color: transparent;
-		@include container;
-		@include clearfix;
+		@include containerFluid;
+//		@include clearfix;
+		
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: space-between;
+		
 	}
 	
 	.mainNav__list {
-		float: left;
-		width: 570px;
+//		float: left;
+		flex-grow: 1;
+//		width: 570px;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 	
 	.mainNav__item {
-		float: left;
+//		float: left;
 		margin-right: 33px;
 		
 		&:last-child {
@@ -278,8 +294,7 @@
 	}
 	
 	.mainNav__userList {
-		float: right;
-		width: 60px;
+		margin-left: 30px;
 	}
 	
 	.mainNav__userLogin {
@@ -288,7 +303,7 @@
 		font-size: 0;
 		
 		&:before {
-			top: 29px;
+			top: 28px;
 			left: 11px;
 		}
 		
@@ -309,7 +324,7 @@
 @media #{$desktopWidth} {
 	
 	.mainNav__list {
-		width: 780px;
+//		width: 780px;
 	}
 	
 	.mainNav__item {
