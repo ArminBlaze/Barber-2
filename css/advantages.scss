@@ -38,19 +38,39 @@
 //	margin-bottom: 25px;
 }
 
-#advantagesInput1:checked ~ .advantages__list .advantages__item:nth-child(1),
-#advantagesInput2:checked ~ .advantages__list .advantages__item:nth-child(2),
-#advantagesInput3:checked ~ .advantages__list .advantages__item:nth-child(3) {
-	display: block;
-}
+	#advantagesInput1:checked ~ .advantages__list .advantages__item:nth-child(1) {
+			margin-left: 0;
+		}
+		
+		#advantagesInput2:checked ~ .advantages__list .advantages__item:nth-child(1) {
+			margin-left: -100%;
+		}
+		
+		#advantagesInput3:checked ~ .advantages__list .advantages__item:nth-child(1) {
+			margin-left: -200%;
+		}
 
-#advantagesInput1:checked ~ .advantages__toggles label[for="advantagesInput1"],
-#advantagesInput2:checked ~ .advantages__toggles label[for="advantagesInput2"],
-#advantagesInput3:checked ~ .advantages__toggles label[for="advantagesInput3"] {
-	background-color: #fff;
-	border-color: #ccc;
-	border-width: 1px;
-}
+		#advantagesInput1:checked ~ .advantages__toggles label[for="advantagesInput1"],
+		#advantagesInput2:checked ~ .advantages__toggles label[for="advantagesInput2"],
+		#advantagesInput3:checked ~ .advantages__toggles label[for="advantagesInput3"] {
+			background-color: #fff;
+			border-color: #ccc;
+			border-width: 1px;
+		}
+
+//#advantagesInput1:checked ~ .advantages__list .advantages__item:nth-child(1),
+//#advantagesInput2:checked ~ .advantages__list .advantages__item:nth-child(2),
+//#advantagesInput3:checked ~ .advantages__list .advantages__item:nth-child(3) {
+//	display: block;
+//}
+//
+//#advantagesInput1:checked ~ .advantages__toggles label[for="advantagesInput1"],
+//#advantagesInput2:checked ~ .advantages__toggles label[for="advantagesInput2"],
+//#advantagesInput3:checked ~ .advantages__toggles label[for="advantagesInput3"] {
+//	background-color: #fff;
+//	border-color: #ccc;
+//	border-width: 1px;
+//}
 
 @media #{$tabletWidth} {
 	

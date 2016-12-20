@@ -1,5 +1,14 @@
 .slider__item {
-	display: none;
+	transition: 0.5s ease-in-out all;
+	flex-shrink: 0;
+	width: 100%;
+	box-sizing: border-box;
+//	display: none;
+}
+
+.slider__list {
+	display: flex;
+	overflow: hidden;
 }
 
 .slider__input {

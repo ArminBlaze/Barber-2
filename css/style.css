@@ -1131,7 +1131,15 @@ template {
 }
 
 .slider__item {
-  display: none;
+  transition: 0.5s ease-in-out all;
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.slider__list {
+  display: flex;
+  overflow: hidden;
 }
 
 .slider__input {
@@ -1209,10 +1217,16 @@ template {
   font-weight: normal;
 }
 
-#advantagesInput1:checked ~ .advantages__list .advantages__item:nth-child(1),
-#advantagesInput2:checked ~ .advantages__list .advantages__item:nth-child(2),
-#advantagesInput3:checked ~ .advantages__list .advantages__item:nth-child(3) {
-  display: block;
+#advantagesInput1:checked ~ .advantages__list .advantages__item:nth-child(1) {
+  margin-left: 0;
+}
+
+#advantagesInput2:checked ~ .advantages__list .advantages__item:nth-child(1) {
+  margin-left: -100%;
+}
+
+#advantagesInput3:checked ~ .advantages__list .advantages__item:nth-child(1) {
+  margin-left: -200%;
 }
 
 #advantagesInput1:checked ~ .advantages__toggles label[for="advantagesInput1"],
@@ -1266,10 +1280,6 @@ template {
   }
 }
 
-.news {
-  padding-top: 30px;
-}
-
 .news__wrapper {
   outline: 1px solid yellow;
   width: 320px;
@@ -1278,8 +1288,10 @@ template {
   min-height: 435px;
   background-color: #fff;
   color: black;
+  padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 27px;
 }
 
 @media (min-width: 768px) {
@@ -1425,19 +1437,24 @@ template {
 }
 
 .reviews {
-  padding-top: 30px;
   padding-bottom: 1px;
   outline: 1px solid yellow;
 }
 
 .reviews__wrapper {
+  min-height: 255px;
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 50px;
+  padding-top: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: 1px solid #e5ddd5;
+  background-color: #fff;
+  outline: 1px solid white;
   width: 320px;
   margin: 0 auto;
-  outline: 1px solid white;
-  min-height: 255px;
-  position: relative;
-  padding-bottom: 15px;
-  box-sizing: border-box;
+  color: black;
 }
 
 @media (min-width: 768px) {
@@ -1465,14 +1482,11 @@ template {
   display: none;
 }
 
-.reviews__item:nth-child(n+2) {
-  display: none;
-}
-
 .reviews__item {
-  margin: 0 20px;
+  margin: 0;
   position: relative;
   padding-left: 70px;
+  box-sizing: border-box;
 }
 
 .reviews__foto {
@@ -1498,20 +1512,26 @@ template {
 }
 
 .reviews__toggles {
-  margin-top: 27px;
+  margin-top: 20px;
 }
 
-#reviewsInput1:checked ~ .reviews__list .reviews__item:nth-child(1),
-#reviewsInput2:checked ~ .reviews__list .reviews__item:nth-child(2),
-#reviewsInput3:checked ~ .reviews__list .reviews__item:nth-child(3) {
-  display: block;
+#reviewsInput1:checked ~ .reviews__list .reviews__item:nth-child(1) {
+  margin-left: 0;
+}
+
+#reviewsInput2:checked ~ .reviews__list .reviews__item:nth-child(1) {
+  margin-left: -100%;
+}
+
+#reviewsInput3:checked ~ .reviews__list .reviews__item:nth-child(1) {
+  margin-left: -200%;
 }
 
 #reviewsInput1:checked ~ .reviews__toggles label[for="reviewsInput1"],
 #reviewsInput2:checked ~ .reviews__toggles label[for="reviewsInput2"],
 #reviewsInput3:checked ~ .reviews__toggles label[for="reviewsInput3"] {
-  background-color: #fff;
-  border-color: #ccc;
+  background-color: #353535;
+  border-color: #626261;
   border-width: 1px;
 }
 
