@@ -44,6 +44,19 @@ img {
 	height: auto;
 }
 
+
+.btn {
+	display: block;
+	border: 1px solid #e5ddd5;
+	box-sizing: border-box;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 11px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
 @import "mixins";
 //@import "outlines";
 @import "normalize";
@@ -52,6 +65,7 @@ img {
 @import "pageHeader";
 @import "mainNav";
 @import "stats";
+@import "slider";
 @import "advantages";
 @import "news";
 @import "reviews";

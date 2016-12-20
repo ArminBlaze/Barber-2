@@ -1,0 +1,33 @@
+.slider__item {
+	display: none;
+}
+
+.slider__input {
+	display: none;
+}
+
+.slider__toggles {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	margin-top: auto;
+}
+
+.slider__toggle {
+	display: block;
+	width: 8px;
+	height: 8px;
+	font-size: 0;
+	background-color: transparent;
+	box-sizing: border-box;
+	border: 2px solid #a5a5a5;
+	transform: rotate(45deg);
+	margin-right: 25px;
+	
+	&:last-child {
+		margin: 0;
+	}
+}
