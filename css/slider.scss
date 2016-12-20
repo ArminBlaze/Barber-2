@@ -40,3 +40,10 @@
 		margin: 0;
 	}
 }
+
+@media #{$tabletWidth} { 
+	.slider__list {
+		display: block;
+		overflow: visible;
+	}
+}
