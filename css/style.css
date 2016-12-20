@@ -1140,6 +1140,9 @@ template {
 .slider__list {
   display: flex;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
 }
 
 .slider__input {
