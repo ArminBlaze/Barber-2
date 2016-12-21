@@ -1,5 +1,6 @@
 .stats {
-	@include containerFluid;
+	@include container;
+//	@include containerFluid;
 	padding-bottom: 1px;
 }
 
@@ -74,7 +75,8 @@
 	
 	.stats__value,
 	.stats__field {
-		padding: 20px;
+//		20 / 320 = 6.25%
+		padding: 6.25%;
 		padding-top: 18px;
 		padding-bottom: 21px;
 //		vertical-align: top;
@@ -200,7 +202,15 @@
 		flex-basis: 50%;
 //		flex-grow: 1;
 //		min-height: 159px;
+		
 		padding: 25px 35px;
+		
+//		35 / 640 = 5,46875%
+		padding: 25px 5.46875%;
+	}
+	
+	.stats__table tr:nth-child(even) {
+		padding-left: 30px;
 	}
 	
 	.stats__value {

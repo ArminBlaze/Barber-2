@@ -32,6 +32,7 @@
 
 .slider__toggle {
 	display: block;
+	float: left;
 	width: 8px;
 	height: 8px;
 	font-size: 0;
@@ -47,8 +48,5 @@
 }
 
 @media #{$tabletWidth} { 
-	.slider__list {
-		display: block;
-		overflow: visible;
-	}
+	
 }

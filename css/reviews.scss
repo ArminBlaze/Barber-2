@@ -1,19 +1,20 @@
 .reviews {
+	border-top: 1px solid #e5ddd5;
 	padding-bottom: 1px;
-	outline: 1px solid yellow;
+//	outline: 1px solid yellow;
+	background-color: $bg_lightgray;
 }
 
 .reviews__wrapper {
 	min-height: 255px;
 	box-sizing: border-box;
 	position: relative;
-	padding-bottom: 50px;
-	padding-top: 28px;
+	padding-top: 25px;
+	padding-bottom: 53px;
 	padding-left: 20px;
 	padding-right: 20px;
-	border-top: 1px solid #e5ddd5;
-	background-color: #fff;
-	outline: 1px solid white;
+//	background-color: #fff;
+//	outline: 1px solid white;
 	@include container;
 	color: black;
 }
@@ -74,15 +75,15 @@
 //	margin-left: -62px;
 }
 
-#reviewsInput1:checked ~ .reviews__list .reviews__item:nth-child(1) {
+#reviewsInput1:checked ~ .slider__wrapper .reviews__list .reviews__item:nth-child(1) {
 	margin-left: 0;
 }
 
-#reviewsInput2:checked ~ .reviews__list .reviews__item:nth-child(1) {
+#reviewsInput2:checked ~ .slider__wrapper .reviews__list .reviews__item:nth-child(1) {
 	margin-left: -100%;
 }
 
-#reviewsInput3:checked ~ .reviews__list .reviews__item:nth-child(1) {
+#reviewsInput3:checked ~ .slider__wrapper .reviews__list .reviews__item:nth-child(1) {
 	margin-left: -200%;
 }
 
@@ -96,19 +97,17 @@
 
 @media #{$tabletWidth} {
 	.reviews {
-		padding-top: 40px;
-		padding-bottom: 70px;
+		padding-top: 37px;
+		padding-bottom: 45px;
 		min-height: 0;
-		outline: 3px solid white;
+//		outline: 3px solid white;
 	}
 	
 	.reviews__wrapper {
 		min-height: 245px;
-	}
-	
-	.reviews__title {
-		text-align: left;
-		margin-right: 200px;
+		padding: 0;
+		padding-top: 3px;
+		text-align: center;
 	}
 	
 	.reviews__write {
@@ -116,28 +115,48 @@
 		position: absolute;
 		right: 0;
 		top: 0;
+		width: 160px;
 	}
 	
 	.reviews__title {
+		text-align: left;
+		margin-right: 200px;
 		font-size: 40px;
 		line-height: 40px;
-		margin-bottom: 0px;
+		margin-bottom: 43px;
+	}
+	
+	.slider__wrapper {
+		position: relative;
+//		background-color: #fff;
+	}
+	
+	.reviews__list {
+		position: relative;
+//		outline: 1px solid blue;
+		padding: 0;
+		margin-left: 50px;
+		margin-right: 50px;
+//		overflow: visible;
+		border: 1px solid $border_color;
 	}
 	
 	
-	$reviews__paddingTop: 85px;
+//	$reviews__paddingTop: 85px;
 	
 	.reviews__item {
 		box-sizing: border-box;
-		outline: 1px solid red;
-		position: absolute;
+//		outline: 1px solid red;
+//		position: absolute;
 		top: 0;
 		bottom: 0;
-		margin: 0 50px;
-		margin-top: $reviews__paddingTop;
+//		margin: 0 50px;
+//		margin-top: $reviews__paddingTop;
 		padding-left: 140px;
 		padding-right: 50px;
 		padding-top: 30px;
+		min-height: 158px;
+		text-align: left;
 	}
 	
 	.reviews__foto {
@@ -145,7 +164,9 @@
 		top: 40px;
 		width: 80px;
 		height: 80px;
-		outline: 1px solid lime;
+//		outline: 1px solid lime;
+		border-radius: 50%;
+		overflow: hidden;
 	}
 	
 	.reviews__prev,
@@ -156,44 +177,74 @@
 		top: 0;
 		bottom: 0;
 		left: 0;
-		margin-top: $reviews__paddingTop;
+//		margin-top: $reviews__paddingTop;
 		font-size: 0;
 		background-color: transparent;
-		outline: 1px solid red;
-		border: none;
+		border: 1px solid $border_color;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			border: 6px solid transparent;
+			border-right: 12px solid black;
+//			outline: 1px solid red;
+			top: 50%;
+			left: 50%;
+			margin-top: -6px;
+			margin-left: -13px;
+		}
 	}
 	
 	.reviews__next {
 		left: auto;
 		right: 0;
+		
+		&:before {
+			left: 50%;
+			margin-left: -5px;
+			border: 6px solid transparent;
+			border-left: 12px solid black;
+		}
 	}
 	
 	.reviews__toggles {
-		bottom: -15px;
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+//		text-align: center;
+//		bottom: -15px;
+//		width: 126px;
+		margin: 0 auto;
+		margin-top: -5px;
+		background-color: $bg_lightgray;
+		padding-left: 25px;
+		padding-right: 25px;
+		min-height: 10px;
 	}
 }
 
 @media #{$desktopWidth} {
-	.reviews {
-		padding-bottom: 100px;
-	}
 	
+	.reviews__list {
+		margin-left: 70px;
+		margin-right: 70px;
+	}
 	
 	.reviews__title {
 		padding-left: 70px;
-		padding-top: 3px;
 	}	
 	
 	.reviews__item {
-		margin-left: 71px;
-		margin-right: 71px;
-		width: 818px;
+//		margin-left: 71px;
+//		margin-right: 71px;
+		width: 100%;
 		padding-right: 75px;
 		padding-left: 320px;
 	}
 	
 	.reviews__toggles {
-		bottom: -60px;
+		margin-top: 45px;
+//		bottom: -60px;
 	}
 	
 	.reviews__foto {
@@ -202,5 +253,7 @@
 		top: 0;
 		bottom: 0;
 		height: auto;
+		overflow: visible;
+		border-radius: 0;
 	}
 }

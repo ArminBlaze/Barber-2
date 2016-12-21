@@ -1,8 +1,9 @@
 .advantages__wrapper {
-	@include containerFluid;
+	@include container;
+//	@include containerFluid;
 //	min-height: 360px;
 	box-sizing: border-box;
-	padding-top: 30px;
+	padding-top: 28px;
 	padding-bottom: 50px;
 }
 
@@ -79,6 +80,11 @@
 		padding-bottom: 20px;
 		padding-left: 30px;
 		padding-right: 30px;
+	}
+	
+	.advantages__list {
+		display: block;
+		overflow: visible;
 	}
 	
 	.advantages__item {

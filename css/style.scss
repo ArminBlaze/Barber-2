@@ -6,6 +6,9 @@ $mobileWidthOnly: '(max-width: 767px)';
 
 $bg_darkgray: #292929;
 $bg_lightgray: #f8f5f2;
+$border_color: #e5ddd5;
+$border_color2: #d5c9bd;
+
 
 // Settings
 
@@ -50,11 +53,21 @@ img {
 	border: 1px solid #e5ddd5;
 	box-sizing: border-box;
 	text-align: center;
-	padding-top: 10px;
+	padding: 10px;
 	padding-bottom: 11px;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 700;
+	color: black;
+	
+	&:hover {
+		border-color: $border_color2;
+	}
+	
+	&:active {
+		background-color: $border_color2;
+		color: rgba(black, 0.3);
+	}
 }
 
 @import "mixins";
