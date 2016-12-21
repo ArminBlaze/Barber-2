@@ -1688,6 +1688,19 @@ template {
     margin-top: -6px;
     margin-left: -13px;
   }
+  .reviews__prev:hover,
+  .reviews__next:hover {
+    border-color: #d5c9bd;
+  }
+  .reviews__prev:active,
+  .reviews__next:active {
+    border-color: #d5c9bd;
+    background-color: #d5c9bd;
+  }
+  .reviews__prev:active:before,
+  .reviews__next:active:before {
+    opacity: 0.3;
+  }
   .reviews__next {
     left: auto;
     right: 0;

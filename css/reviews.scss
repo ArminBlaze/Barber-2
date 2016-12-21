@@ -193,6 +193,19 @@
 			margin-top: -6px;
 			margin-left: -13px;
 		}
+		
+		&:hover {
+			border-color: $border_color2;
+		}
+		
+		&:active {
+			border-color: $border_color2;
+			background-color: $border_color2;
+			
+			&:before {
+				opacity: 0.3;
+			}
+		}
 	}
 	
 	.reviews__next {
