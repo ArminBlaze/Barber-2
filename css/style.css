@@ -1850,6 +1850,7 @@ template {
 @media (min-width: 768px) {
   .pageFooter {
     min-height: 350px;
+    padding-top: 38px;
   }
   .pageFooter__contacts {
     min-height: 150px;
@@ -1861,9 +1862,15 @@ template {
   .pageFooter__contacts b {
     text-transform: uppercase;
   }
-  .pageFooter__contacts a {
+  .pageFooter__tel {
     display: block;
-    margin-top: -11px;
+    margin: 0;
+    padding-left: 0;
+    margin-top: -10px;
+    text-align: left;
+    text-transform: none;
+    border: none;
+    font-weight: normal;
   }
   .pageFooter__contacts_hidden {
     display: inline;
@@ -1876,7 +1883,11 @@ template {
     top: 0;
     right: 0;
     width: 160px;
+    padding: 0;
     padding-top: 10px;
+  }
+  .pageFooter__copyrightLink {
+    width: 160px;
   }
 }
 
