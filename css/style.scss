@@ -9,6 +9,10 @@ $bg_lightgray: #f8f5f2;
 $border_color: #e5ddd5;
 $border_color2: #d5c9bd;
 
+$border_foot1: #3e3e3e;
+$border_foot2: #515151;
+$border_foot3: #252525;
+
 
 // Settings
 
@@ -67,6 +71,21 @@ img {
 	&:active {
 		background-color: $border_color2;
 		color: rgba(black, 0.3);
+	}
+}
+
+.btn_foot {
+	color: white;
+	border: 1px solid $border_foot1;
+	
+	&:hover {
+		border-color: $border_foot2;
+	}
+	
+	&:active {
+		background-color: $border_foot3;
+		border-color: transparent;
+		color: rgba(white, 0.3);
 	}
 }
 
